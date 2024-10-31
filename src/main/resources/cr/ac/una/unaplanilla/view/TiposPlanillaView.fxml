@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXCheckbox?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="520.0" prefWidth="740.0" styleClass="jfx-panelfondo" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.unaplanilla.controller.TiposPlanillaController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="jfx-contenedor-externo" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <VBox alignment="CENTER" layoutX="260.0" layoutY="150.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label styleClass="jfx-titulo-label" text="Control Tipos Planilla" />
+                  <TabPane fx:id="tbpTipoPlanilla" prefHeight="375.0" prefWidth="719.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="tabTipoPlanillas" text="Tipo Planilla">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="719.0">
+                                 <children>
+                                    <VBox layoutX="236.0" layoutY="-14.0" prefHeight="200.0" prefWidth="100.0" styleClass="jfx-contenedor-principal" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                       <children>
+                                          <HBox prefHeight="175.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox alignment="CENTER_LEFT" prefHeight="150.0" prefWidth="330.0" spacing="20.0">
+                                                   <children>
+                                                      <MFXTextField fx:id="txtId" floatingText="ID" onKeyPressed="#onKeyPressedTxtId" prefHeight="50.0" prefWidth="250.0">
+                                                         <VBox.margin>
+                                                            <Insets left="40.0" />
+                                                         </VBox.margin>
+                                                      </MFXTextField>
+                                                      <MFXTextField fx:id="txtCodigo" floatingText="Código" prefHeight="50.0" prefWidth="250.0">
+                                                         <VBox.margin>
+                                                            <Insets left="40.0" />
+                                                         </VBox.margin>
+                                                      </MFXTextField>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="TOP_RIGHT" prefHeight="174.0" prefWidth="339.0">
+                                                   <children>
+                                                      <MFXCheckbox fx:id="chkActivo" text="Activo" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets right="20.0" top="20.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <VBox prefHeight="170.0" prefWidth="719.0" spacing="20.0">
+                                             <children>
+                                                <MFXTextField fx:id="txtDescripcion" floatingText="Descripción" prefHeight="50.0" prefWidth="590.0">
+                                                   <VBox.margin>
+                                                      <Insets left="40.0" />
+                                                   </VBox.margin>
+                                                </MFXTextField>
+                                                <MFXTextField fx:id="txtPlanillasXMes" floatingText="Planillas X Mes" prefHeight="50.0" prefWidth="249.0">
+                                                   <VBox.margin>
+                                                      <Insets left="40.0" />
+                                                   </VBox.margin>
+                                                </MFXTextField>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab fx:id="tabEmpleados" onSelectionChanged="#selectionChangeTabEmp" text="Inclusión Empleados">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox alignment="TOP_CENTER" layoutX="158.0" layoutY="34.0" prefHeight="200.0" prefWidth="100.0" styleClass="jfx-contenedor-principal" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                       <children>
+                                          <HBox prefHeight="48.0" prefWidth="667.0" spacing="10.0">
+                                             <children>
+                                                <MFXTextField fx:id="txtIdEmpleado" floatingText="IdEmpleado" onKeyPressed="#onKeyPressedTxtIdEmpleado" prefWidth="136.0" />
+                                                <MFXTextField fx:id="txtNombreEmpleado" editable="false" floatingText="Nombre" prefWidth="466.0" />
+                                                <MFXButton fx:id="btnAgregarEmpleado" contentDisplay="BOTTOM" onAction="#onActionBtnAgregarEmpleado" prefHeight="44.0" prefWidth="50.0" styleClass="jfx-btn-cargar-empleados" text=" ">
+                                                   <graphic>
+                                                      <ImageView fitHeight="34.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" />
+                                                   </graphic>
+                                                </MFXButton>
+                                             </children>
+                                          </HBox>
+                                          <HBox styleClass="jfx-lbl-mediana">
+                                             <children>
+                                                <Label styleClass="jfx-lbl-mediano" text="Lista de Empleados" />
+                                             </children>
+                                          </HBox>
+                                          <Separator prefWidth="200.0" styleClass="separator-blue" />
+                                          <TableView fx:id="tbvListaEmpleados" prefHeight="239.0" prefWidth="667.0">
+                                            <columns>
+                                              <TableColumn fx:id="tbcCodigo" prefWidth="75.0" text="ID" />
+                                              <TableColumn fx:id="tbcNombre" minWidth="450.0" prefWidth="75.0" text="Nombre" />
+                                                <TableColumn fx:id="tbcEliminar" minWidth="60.0" prefWidth="120.0" text="Eliminar" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+                  <HBox alignment="CENTER" prefHeight="61.0" prefWidth="600.0" spacing="20.0">
+                     <children>
+                        <MFXButton fx:id="btnNuevo" onAction="#onActionBtnNuevo" prefHeight="50.0" prefWidth="150.0" styleClass="jfx-btn-nuevo" text="Nuevo" HBox.hgrow="ALWAYS">
+                           <graphic>
+                              <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </MFXButton>
+                        <MFXButton fx:id="btnBuscar" onAction="#onActionBtnBuscar" prefHeight="50.0" prefWidth="150.0" styleClass="jfx-btn-buscar" text="Buscar" HBox.hgrow="ALWAYS">
+                           <graphic>
+                              <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </MFXButton>
+                        <MFXButton fx:id="btnEliminar" onAction="#onActionBtnEliminar" prefHeight="50.0" prefWidth="150.0" styleClass="jfx-btn-eliminar" text="Eliminar" HBox.hgrow="ALWAYS">
+                           <graphic>
+                              <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </MFXButton>
+                        <MFXButton fx:id="btnGuardar" onAction="#onActionBtnGuardar" prefHeight="50.0" prefWidth="150.0" styleClass="jfx-btn-guardar" text="Guardar" HBox.hgrow="ALWAYS">
+                           <graphic>
+                              <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </MFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

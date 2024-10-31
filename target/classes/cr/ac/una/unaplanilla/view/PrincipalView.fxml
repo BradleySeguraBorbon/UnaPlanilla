@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1000.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.unaplanilla.controller.PrincipalController">
+   <left>
+      <VBox alignment="TOP_CENTER" minWidth="-Infinity" prefHeight="633.0" prefWidth="170.0" spacing="30.0" styleClass="jfx-barra-navegacion" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane>
+               <children>
+                  <ImageView fx:id="imvUnaBackground" fitHeight="104.0" fitWidth="131.0" pickOnBounds="true" styleClass="unaBackground" />
+                  <ImageView fitHeight="75.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" styleClass="unaLogo" />
+               </children>
+            </StackPane>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="imvUserIcon" fitHeight="55.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true" styleClass="ImageView" />
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="lblUser" text="Usuario" />
+                        <Label fx:id="lblName" text="Name" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <MFXButton buttonType="RAISED" onAction="#onActionBtnEmpleados" prefHeight="46.0" prefWidth="135.0" styleClass="mfx-btn-empleados" text="Empleados" />
+            <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" onAction="#onActionBtnTiposPlanilla" prefHeight="46.0" prefWidth="135.0" styleClass="mfx-btn-planillas" text="Tipos Planilla" />
+            <MFXButton fx:id="btnCerrarSesion" buttonType="RAISED" onAction="#onActionBtnCerrarSesion" prefHeight="46.0" prefWidth="135.0" styleClass="mfx-btn-cerrar-sesion" text="Cerrar Sesión" />
+            <MFXButton fx:id="btnSalir" buttonType="RAISED" onAction="#onActionBtnSalir" prefHeight="46.0" prefWidth="135.0" styleClass="mfx-btn-salir" text="Salir" />
+         </children>
+         <padding>
+            <Insets top="40.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="633.0" prefWidth="849.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></VBox>
+   </center>
+   <top>
+      <HBox alignment="CENTER" prefHeight="87.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label styleClass="jfx-titulo-grande-label" text="Sistema UNA Planilla" />
+         </children></HBox>
+   </top>
+</BorderPane>

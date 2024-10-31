@@ -1,0 +1,206 @@
+* {
+    -fx-base-color-focus: #09b6bc;
+    -fx-base-color-unfocus: #4d4d4d;
+    -fx-base-color-etiquetas:#bcbcbc;
+    -fx-base-color-titulos:#51b6cd;
+    -fx-base-color-error:#D34336;
+    -fx-base-color-id:#00C853;
+    -mfx-purple: -fx-base-color-focus;
+    -mfx-main: -fx-base-color-focus;
+    -fx-base-color-highlight: #99ffff;
+}
+
+.mfx-text-field {
+    -mfx-main: -fx-base-color-focus;
+    -mfx-float-mode: BORDER;
+    -fx-font-size: 14.0px;
+    -fx-pref-height: 40px;
+    -fx-min-height: 40px;
+    -fx-max-height: 40px;
+    -fx-alignment: TOP_LEFT;
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: -fx-base-color-etiquetas;
+}
+
+.mfx-text-field .text-field {
+    -fx-highlight-fill: -fx-base-color-highlight;
+}
+
+.mfx-text-field:floating .floating-text {
+    -fx-font-weight: bold;
+}
+
+.jfx-panelfondo {
+    -fx-background-color: #2196F3;
+    -fx-opacity: 0.8;
+}
+
+.jfx-panelfondo > AnchorPane {
+    -fx-background-color: White;
+    -fx-border-color: gray;
+}
+
+.jfx-titulo-label {
+    -fx-font-size: 24px;
+    -fx-text-fill: -fx-base-color-titulos;
+    -fx-font-weight: bold;
+    -fx-padding: 5 0 5 0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 2, 0.0, 1, 2);
+}
+
+.jfx-titulo-grande-label {
+    -fx-font-size: 32px;
+    -fx-text-fill: -fx-base-color-titulos;
+    -fx-font-weight: bold;
+    -fx-padding: 5 0 5 0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 2, 0.0, 1, 2);
+}
+
+.jfx-lbl-mediano {
+    -fx-font-size: 14px;
+    -fx-text-fill: -fx-base-color-titulos;
+    -fx-font-weight: bold;
+}
+
+.jfx-lbl-pequeño {
+    -fx-font-size: 12px;
+    -fx-text-fill: -fx-base-color-titulos;
+    -fx-font-weight: bold;
+}
+
+.jfx-lbl-subtitulo {
+    -fx-font-size: 24px;
+    -fx-background-color: #0099ff;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+.jfx-contenedor-externo {
+    -fx-border-color: #999999;
+    -fx-border-width: 10px;
+}
+
+.jfx-contenedor-principal{
+    -fx-background-color: white;
+    -fx-background-radius: 4.0;
+    -fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.15), 10.0, 0.7, 0.0, 1.5);
+    -fx-padding: 25 15 15 15;
+}
+
+.jfx-barra-navegacion {
+    -fx-background-color: #cccccc;
+    -fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.15), 10.0, 0.7, 0.0, 1.5);
+}
+
+.button:hover {
+    -fx-background-color: #FF6D00;
+}
+
+.jfx-btn-nuevo, .jfx-btn-nuevo:armed, .jfx-btn-nuevo:focused {
+    -fx-background-color: #2196F3;
+}
+
+.jfx-btn-buscar, .jfx-btn-buscar:armed, .jfx-btn-buscar:focused {
+    -fx-background-color:#00ff00
+}
+
+.jfx-btn-eliminar, .jfx-btn-eliminar:armed, .jfx-btn-eliminar:focused {
+    -fx-background-color: #ff0000
+}
+
+.jfx-btn-guardar, .jfx-btn-guardar:armed, -jfx-btn-guardar:focused {
+    -fx-background-color: #9900ff
+}
+
+.mfx-button{
+    -mfx-button-type: RAISED;
+    -fx-opacity: 0.8;
+    -fx-content-display: left;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-alignment:CENTER;
+}
+
+.jfx-btnimg-tbveliminar {
+    -fx-opacity: 0.8;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: contain;
+    -fx-background-color: #f44336;
+    -fx-background-image : url("../resources/Eliminar-48.png");
+}
+
+.jfx-btn-nuevo>ImageView{
+    -fx-image: url("../resources/Agregar-48.png");
+}
+
+.jfx-btn-buscar>ImageView {
+    -fx-image: url("../resources/Buscar-48.png");
+}
+
+.jfx-btn-eliminar>ImageView {
+    -fx-image: url("../resources/Eliminar-48.png");
+}
+
+.jfx-btn-guardar>ImageView {
+    -fx-image: url("../resources/Guardar-48.png");
+}
+
+.jfx-btn-cargar-empleados {
+    -fx-background-color: -fx-base-color-titulos;
+}
+
+.jfx-btn-cargar-empleados>ImageView {
+    -fx-image: url("../resources/Agregar-48.png");
+}
+
+.mfx-btn-empleados,
+.mfx-btn-empleados:focused {
+    -fx-background-color: #00cccc;
+}
+
+.mfx-btn-planillas,
+.mfx-btn-planillas:focused {
+    -fx-background-color: #666666
+}
+
+.mfx-btn-cerrar-sesion,
+.mfx-btn-cerrar-sesion:focused {
+    -fx-background-color: #0066ff
+}
+
+.mfx-btn-salir,
+.mfx-btn-salir:focused {
+    -fx-background-color: #ff0033
+}
+
+.mfx-btn-green {
+    -fx-background-color: #00ff66
+}
+
+.unaBackground {
+    -fx-image: url("../resources/FondoInicioRojo.png");
+}
+
+.unaLogo {
+    -fx-image: url("../resources/LogoUNArojo.png");
+}
+
+.ImageView#imvUserIcon {
+    -fx-image: url("../resources/Usuario-48.png");
+}
+
+.ImageView#imvAddIcon {
+    -fx-image: url("../resources/Agregar-48.png");
+}
+
+.separator-blue {
+    -fx-background-color: -fx-base-color-focus;
+}
+
+.curved-radius-pane {
+    -fx-background-radius: 5px;
+}
+
